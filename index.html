@@ -28,34 +28,22 @@ table tr:nth-child(even) {
 <div id="id01"></div>
 
 <script>
-var xmlhttp = new XMLHttpRequest();
-var url = "http://www.w3schools.com/website/Customers_MYSQL.php";
-
-xmlhttp.onreadystatechange=function() {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        myFunction(xmlhttp.responseText);
-    }
-}
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-
-function myFunction(response) {
-    var arr = JSON.parse(response);
+    var arr = JSON.parse([{"training": {"real": "362m11.938s", "sys": "10m12.728s", "user": "9892m26.612s", "voc-size": "1438043", "total-words": "3805769087"}, "params": {"Window_Size": "10", "Total_Iteration": "5", "Sub_Sampling": "1e-4", "No": "0", "Vector_Dim": "200", "Starting_Alpha": "0.025", "Negative_Samples": "10"}, "eval": {"gram3-comparative": ["1029", "1332"], "gram8-plural": ["888", "1332"], "capital-common-countries": ["471", "506"], "city-in-state": ["1573", "2467"], "family": ["411", "506"], "total-acc": ["12731", "19544"], "semantic-acc": ["6563", "8869"], "gram9-plural-verbs": ["482", "870"], "gram2-opposite": ["248", "812"], "currency": ["113", "866"], "gram4-superlative": ["416", "1122"], "gram6-nationality-adjective": ["1431", "1599"], "gram7-past-tense": ["807", "1560"], "gram5-present-participle": ["579", "1056"], "capital-world": ["3995", "4524"], "q-total": ["19544", "19544"], "syntactic-acc": ["6168", "10675"], "gram1-adjective-to-adverb": ["288", "992"]}, "voc-file": "voc_4369/voc-10_n", "corpus": "wiki.txt", "job-id": 6324}, {"training": {"real": "408m19.538s", "sys": "6m40.076s", "user": "5924m34.568s", "voc-size": "1438043", "total-words": "3805769087"}, "params": {"Window_Size": "10", "Total_Iteration": "5", "Sub_Sampling": "1e-4", "No": "1", "Vector_Dim": "200", "Starting_Alpha": "0.025", "Negative_Samples": "20"}, "eval": {"gram3-comparative": ["1023", "1332"], "gram8-plural": ["931", "1332"], "capital-common-countries": ["463", "506"], "city-in-state": ["1577", "2467"], "family": ["411", "506"], "total-acc": ["12793", "19544"], "semantic-acc": ["6569", "8869"], "gram9-plural-verbs": ["493", "870"], "gram2-opposite": ["259", "812"], "currency": ["111", "866"], "gram4-superlative": ["388", "1122"], "gram6-nationality-adjective": ["1431", "1599"], "gram7-past-tense": ["833", "1560"], "gram5-present-participle": ["566", "1056"], "capital-world": ["4007", "4524"], "q-total": ["19544", "19544"], "syntactic-acc": ["6224", "10675"], "gram1-adjective-to-adverb": ["300", "992"]}, "voc-file": "voc_4369/voc-10_n", "corpus": "wiki.txt", "job-id": 6325}, {"training": {"real": "484m47.903s", "sys": "8m18.224s", "user": "7063m29.320s", "voc-size": "1438043", "total-words": "3805769087"}, "params": {"Window_Size": "10", "Total_Iteration": "5", "Sub_Sampling": "1e-4", "No": "2", "Vector_Dim": "200", "Starting_Alpha": "0.025", "Negative_Samples": "30"}, "eval": {"gram3-comparative": ["1011", "1332"], "gram8-plural": ["931", "1332"], "capital-common-countries": ["484", "506"], "city-in-state": ["1590", "2467"], "family": ["408", "506"], "total-acc": ["12798", "19544"], "semantic-acc": ["6575", "8869"], "gram9-plural-verbs": ["506", "870"], "gram2-opposite": ["261", "812"], "currency": ["102", "866"], "gram4-superlative": ["380", "1122"], "gram6-nationality-adjective": ["1435", "1599"], "gram7-past-tense": ["820", "1560"], "gram5-present-participle": ["568", "1056"], "capital-world": ["3991", "4524"], "q-total": ["19544", "19544"], "syntactic-acc": ["6223", "10675"], "gram1-adjective-to-adverb": ["311", "992"]}, "voc-file": "voc_4369/voc-10_n", "corpus": "wiki.txt", "job-id": 6326}]
+);
     var i;
     var out = "<table>";
 
     for(i = 0; i < arr.length; i++) {
         out += "<tr><td>" +
-        arr[i].Name +
+        arr[i].training.real +
         "</td><td>" +
-        arr[i].City +
+        arr[i].training.sys +
         "</td><td>" +
-        arr[i].Country +
+        arr[i].training.user +
         "</td></tr>";
     }
     out += "</table>";
     document.getElementById("id01").innerHTML = out;
-}
 </script>
 
 </body>
