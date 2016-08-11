@@ -64,8 +64,8 @@ function myFunction(response) {
     
     var out = "<table>";
     out += "<tr>"
-    for(pr in label_array){
-        out+="<td>"+pr+"</td>"
+    for (var i=0; i < label_array.length; i++){
+        out+="<td>"+label_array[i]+"</td>"
     }
     out += "</tr>"
    /* for(i = 0; i < arr.length; i++) {
