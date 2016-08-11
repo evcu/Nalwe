@@ -49,6 +49,16 @@ function myFunction(response) {
     out += "<tr><td>"
     console.log(arr);
     jsjs=arr;
+    for(pr in arr[0].params){
+        out+=pr+"</td><td>"
+    }
+    for(pr in arr[0].eval){
+        out+=pr+"</td><td>"
+    }
+    for(pr in arr[0].training){
+        out+=pr+"</td><td>"
+    }
+    out += "</td></tr>"
     for(i = 0; i < arr.length; i++) {
         out += "<tr><td>" +
         arr[i].training.real +
