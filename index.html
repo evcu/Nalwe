@@ -28,11 +28,26 @@ table tr:nth-child(even) {
 <p>Corpus: Wikipedia Dump July 2016</p>
 <p>Min-count: 10</p>
 <div id="id01"></div>
+<p>CCC: capital-common-countries</p>
+<p>CWO: capital-world</p>
+<p>CUR: currency</p>
+<p>CIS: city-in-state</p>
+<p>FAM: family</p>
+<p>GR1: gram1-adjective-to-adverb</p>
+<p>GR2: gram2-opposite</p>
+<p>GR3: gram3-comparative</p>
+<p>GR4: gram4-superlative</p>
+<p>GR5: gram5-present-participle</p>
+<p>GR6: gram6-nationality-adjective</p>
+<p>GR7: gram7-past-tense</p>
+<p>GR8: gram8-plural</p>
+<p>GR9: gram9-plural-verbs</p>
 
 <script>
 var xmlhttp = new XMLHttpRequest();
 var url = "res.json";
 var jsjs;
+var label_array=["Window_Size",	"Iteration",	"Sub_Sampling",	"Vector_Dim",	"Starting_Alpha",	"Negative_Samples","Sem. Acc.","Syn. Acc.","Tot. Acc.","User Time","Real Time","Question-Seen","CCC","CWO","CUR","CIS","FAM","GR1","GR2","GR3","GR4","GR5","GR6","G67","GR8","GR9"]
 
 xmlhttp.onreadystatechange=function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -45,17 +60,11 @@ xmlhttp.send();
 function myFunction(response) {
     var arr = JSON.parse(response);
     var i;
+    jsjs=arr;
+    
     var out = "<table>";
     out += "<tr>"
-    console.log(arr);
-    jsjs=arr;
     for(pr in arr[0].params){
-        out+="<td>"+pr+"</td>"
-    }
-    for(pr in arr[0].eval){
-        out+="<td>"+pr+"</td>"
-    }
-    for(pr in arr[0].training){
         out+="<td>"+pr+"</td>"
     }
     out += "</tr>"
