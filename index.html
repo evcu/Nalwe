@@ -46,11 +46,11 @@ function myFunction(response) {
     console.log(arr);
     for(i = 0; i < arr.length; i++) {
         out += "<tr><td>" +
-        arr[i].Name +
+        arr[i].training.real +
         "</td><td>" +
-        arr[i].City +
+        arr[i].training.sys +
         "</td><td>" +
-        arr[i].Country +
+        arr[i].training.user +
         "</td></tr>";
     }
     out += "</table>";
