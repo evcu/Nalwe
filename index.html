@@ -46,20 +46,20 @@ function myFunction(response) {
     var arr = JSON.parse(response);
     var i;
     var out = "<table>";
-    out += "<tr><td>"
+    out += "<tr>"
     console.log(arr);
     jsjs=arr;
     for(pr in arr[0].params){
-        out+=pr+"</td><td>"
+        out+="<td>"+pr+"</td>"
     }
     for(pr in arr[0].eval){
-        out+=pr+"</td><td>"
+        out+="<td>"+pr+"</td>"
     }
     for(pr in arr[0].training){
-        out+=pr+"</td><td>"
+        out+="<td>"+pr+"</td>"
     }
-    out += "</td></tr>"
-    for(i = 0; i < arr.length; i++) {
+    out += "</tr>"
+   /* for(i = 0; i < arr.length; i++) {
         out += "<tr><td>" +
         arr[i].training.real +
         "</td><td>" +
@@ -79,7 +79,7 @@ function myFunction(response) {
         "</td><td>" +
         arr[i].training.user +
         "</td></tr>";
-    }
+    }*/
     out += "</table>";
     document.getElementById("id01").innerHTML = out;
 }
