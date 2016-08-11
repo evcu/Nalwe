@@ -68,29 +68,67 @@ function myFunction(response) {
         out+="<td>"+label_array[i]+"</td>"
     }
     out += "</tr>"
-   /* for(i = 0; i < arr.length; i++) {
+    for(i = 0; i < arr.length; i++) {
         out += "<tr><td>" +
-        arr[i].training.real +
+        arr[i].params.Window_Size +
         "</td><td>" +
-        arr[i].training.sys +
+        arr[i].params.Total_Iteration +
         "</td><td>" +
-         arr[i].training.sys +
+         arr[i].params.Sub_Sampling +
         "</td><td>" +
-         arr[i].training.sys +
+         arr[i].params.Vector_Dim +
         "</td><td>" +
-         arr[i].training.sys +
+         arr[i].params.Starting_Alpha +
         "</td><td>" +
-         arr[i].training.sys +
+         arr[i].params.Negative_Samples +
         "</td><td>" +
-         arr[i].training.sys +
+         getPercentage(arr[i].eval["semantic-acc"]) +
         "</td><td>" +
-         arr[i].training.sys +
+         getPercentage(arr[i].eval["syntactic-acc"]) +
+        "</td><td>" +
+         getPercentage(arr[i].eval["total-acc"]) +
         "</td><td>" +
         arr[i].training.user +
+        "</td></td>";
+        arr[i].training.real +
+        "</td></td>";
+        getPercentage(arr[i].eval["q-total"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["capital-common-countries"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["capital-world"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["currency"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["city-in-state"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["family"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["gram1-adjective-to-adverb"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["gram2-opposite"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["gram3-comparative"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["gram4-superlative"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["gram5-present-participle"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["gram6-nationality-adjective"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["gram7-past-tense"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["gram8-plural"]) +
+        "</td></td>";
+        getPercentage(arr[i].eval["gram9-plural-verbs"]) +
         "</td></tr>";
-    }*/
+    }
+
     out += "</table>";
     document.getElementById("id01").innerHTML = out;
+}
+function getPercentage(arr){
+    return (arr[0]/arr[1]*100).toPrecision(2);
 }
 </script>
 
