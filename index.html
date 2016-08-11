@@ -24,12 +24,15 @@ table tr:nth-child(even) {
 
 <body>
 
-<h1>Customers</h1>
+<h1>First Results</h1>
+<p>Corpus: Wikipedia Dump July 2016</p>
+<p>Min-count: 10</p>
 <div id="id01"></div>
 
 <script>
 var xmlhttp = new XMLHttpRequest();
 var url = "res.json";
+var jsjs;
 
 xmlhttp.onreadystatechange=function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -43,12 +46,26 @@ function myFunction(response) {
     var arr = JSON.parse(response);
     var i;
     var out = "<table>";
+    out += "<tr><td>"
     console.log(arr);
+    jsjs=arr;
     for(i = 0; i < arr.length; i++) {
         out += "<tr><td>" +
         arr[i].training.real +
         "</td><td>" +
         arr[i].training.sys +
+        "</td><td>" +
+         arr[i].training.sys +
+        "</td><td>" +
+         arr[i].training.sys +
+        "</td><td>" +
+         arr[i].training.sys +
+        "</td><td>" +
+         arr[i].training.sys +
+        "</td><td>" +
+         arr[i].training.sys +
+        "</td><td>" +
+         arr[i].training.sys +
         "</td><td>" +
         arr[i].training.user +
         "</td></tr>";
