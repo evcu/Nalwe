@@ -25,8 +25,8 @@ table tr:nth-child(even) {
 <body>
 
 <h1>First Results</h1>
-<p>Corpus: Wikipedia Dump July 2016</p>
-<p>Min-count: 10</p>
+<p>Corpus: Wikipedia Dump July 2016: 3,805,769,087 words</p>
+<p>Vocabulary: Stopwords-removal->NO Min-count->10: 1438043 words in vocabulary</p>
 <div id="id01"></div>
 <p>CCC: capital-common-countries</p>
 <p>CWO: capital-world</p>
@@ -47,7 +47,7 @@ table tr:nth-child(even) {
 var xmlhttp = new XMLHttpRequest();
 var url = "res.json";
 var jsjs;
-var label_array=["Window_Size",	"Iteration",	"Sub_Sampling",	"Vector_Dim",	"Starting_Alpha",	"Negative_Samples","Sem. Acc.","Syn. Acc.","Tot. Acc.","User Time","Real Time","Question-Seen","CCC","CWO","CUR","CIS","FAM","GR1","GR2","GR3","GR4","GR5","GR6","G67","GR8","GR9"]
+var label_array=["Window_Size",	"Iteration",	"Sub_Sampl.",	"Vec_Dim",	"Start_Alpha",	"Neg_Samp","Sem. Acc.","Syn. Acc.","Tot. Acc.","User Time","Real Time","Question-Seen","CCC","CWO","CUR","CIS","FAM","GR1","GR2","GR3","GR4","GR5","GR6","G67","GR8","GR9"]
 
 xmlhttp.onreadystatechange=function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
